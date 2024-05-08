@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>yana</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            display: block; /* Ensures inline elements are centered */
+            margin: 0 auto; /* Centers the image horizontally */
+        }
+
+        button {
+            font-size: 20px;
+            display: block; /* Ensures inline elements are centered */
+            margin: 10px auto; /* Centers the button horizontally with a small top margin */
+        }
+
+        .new-container {
+            display: none;
+            text-align: center;
+        }
+
+        .love-letter-animation {
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+            opacity: 0;
+            animation: fadeInText 5s forwards;
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<audio id="myAudio">
+    <source src="wave to earth - bad.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+<div class="container" id="oldContainer">
+    <img src="cot.jpeg" alt="">
+    <button onclick="showNewContainer()">CLICK MOPO</button>
+</div>
+
+<div class="new-container" id="newContainer">
+    <img src="cat-0.jpg" alt="">
+    <p class="love-letter-animation">i love you patche hehe!</p>
+</div>
+
+<script>
+    function showNewContainer() {
+        const oldContainer = document.getElementById('oldContainer');
+        const newContainer = document.getElementById('newContainer');
+        const audio = document.getElementById('myAudio');
+        
+        oldContainer.style.display = 'none';
+        newContainer.style.display = 'block';
+        
+        audio.play();
+    }
+</script>
+
+</body>
+</html>
